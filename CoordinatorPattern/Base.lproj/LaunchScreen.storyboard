@@ -15,17 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO8-Dd-Crc">
-                                <rect key="frame" x="186" y="442.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="ktt-Nv-vjH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HO8-Dd-Crc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1U8-A2-So1"/>
-                            <constraint firstItem="HO8-Dd-Crc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rPC-CL-BS9"/>
+                            <constraint firstItem="ktt-Nv-vjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ui3-r0-kpl"/>
+                            <constraint firstItem="ktt-Nv-vjH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VTS-Ug-WqB"/>
+                            <constraint firstItem="ktt-Nv-vjH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dXM-PF-a4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ktt-Nv-vjH" secondAttribute="bottom" id="twF-MH-OQm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -35,4 +34,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch-screen" width="240" height="338"/>
+    </resources>
 </document>
