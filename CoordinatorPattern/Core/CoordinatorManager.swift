@@ -10,3 +10,23 @@ import Foundation
 
 
 // Create a Factory and a manager
+struct CoordinatorFactory {
+    static func createQuestCoordinator() -> QuestCoordinator {
+        return QuestCoordinator()
+    }
+}
+
+class CoordinatorManager: NSObject {
+    static let shared = CoordinatorManager()
+
+    var currentCoordinator: RootViewCoordinator?
+
+    init(currentCoordinator: RootViewCoordinator? = nil) {
+        self.currentCoordinator = currentCoordinator
+        super.init()
+    }
+
+    func deallocateCurrentCoordinator() {
+        currentCoordinator = nil
+    }
+}

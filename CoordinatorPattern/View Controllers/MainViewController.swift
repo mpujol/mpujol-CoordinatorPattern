@@ -26,9 +26,9 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        let navigationViewController = UINavigationController(rootViewController: QuestViewController(inventory: Inventory(), activeQuestItem: .bell))
-        navigationViewController.modalPresentationStyle = .fullScreen
-        navigationController?.present(navigationViewController, animated: true, completion: nil)
+//        let navigationViewController = UINavigationController(rootViewController: QuestViewController(inventory: Inventory(), activeQuestItem: .bell))
+//        navigationViewController.modalPresentationStyle = .fullScreen
+//        navigationController?.present(navigationViewController, animated: true, completion: nil)
 
         /// What do we want to do?
         /// 1. Abstract all navigation logic
@@ -41,7 +41,11 @@ class MainViewController: UIViewController {
         ///
         /// This will be where we create coordinator
         /// we just need to ensure it has reference throughout the flow
-        ///
+        CoordinatorManager.shared.currentCoordinator = CoordinatorFactory.createQuestCoordinator()
+        guard let currentCoordinator = CoordinatorManager.shared.currentCoordinator as? QuestCoordinator else { return }
+
+        currentCoordinator.start()
+        navigationController?.present(currentCoordinator.rootViewController, animated: true, completion: nil)
     }
 
 }

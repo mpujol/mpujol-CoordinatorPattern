@@ -18,12 +18,13 @@ class QuestViewController: UIViewController {
     @IBOutlet var currentQuestItemImageView: UIImageView!
 
     var activeQuestItem: QuestItem
-    var inventory: Inventory
+
+    var onComplete: (() -> Void)?
+    weak var coordinator: QuestCoordinator?
 
     // MARK: - Init
-    init(inventory: Inventory, activeQuestItem: QuestItem) {
+    init(activeQuestItem: QuestItem) {
         self.activeQuestItem = activeQuestItem
-        self.inventory = inventory
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -59,13 +60,14 @@ class QuestViewController: UIViewController {
         updateActiveQuestImageView(activeQuestItem: activeQuestItem)
     }
     func setupInventoryViews() {
-        if inventory.hasBell {
+        guard let coordinator = coordinator else { return }
+        if coordinator.inventory.hasBell {
             bellImageView.alpha = 1.0
         }
-        if inventory.hasGuitar {
+        if coordinator.inventory.hasGuitar {
             guitarImageView.alpha = 1.0
         }
-        if inventory.hasPiano {
+        if coordinator.inventory.hasPiano {
             pianoImageView.alpha = 1.0
         }
     }
@@ -84,21 +86,11 @@ class QuestViewController: UIViewController {
 
 
     func updateInventory(with questItem: QuestItem) {
-        inventory.items.append(questItem)
+        guard let coordinator = coordinator else { return }
+        coordinator.inventory.items.append(questItem)
         setupInventoryViews()
     }
     func presentNextStage() {
-
-        if activeQuestItem == .bell {
-        navigationController?.pushViewController(QuestViewController(inventory: inventory, activeQuestItem: .guitar), animated: true)
-        }
-
-        if activeQuestItem == .guitar {
-            navigationController?.pushViewController(QuestViewController(inventory: inventory, activeQuestItem: .piano), animated: true)
-        }
-
-        if activeQuestItem == .piano && inventory.hasAllItems {
-            navigationController?.pushViewController(CompleteViewController(), animated: true)
-        }
+        onComplete?()
     }
 }

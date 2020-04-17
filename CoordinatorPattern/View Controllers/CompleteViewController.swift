@@ -10,6 +10,9 @@ import UIKit
 
 class CompleteViewController: UIViewController {
 
+    var onComplete: (() -> Void)?
+    weak var coordinator: QuestCoordinator?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +20,8 @@ class CompleteViewController: UIViewController {
     }
 
     @IBAction func completeButtonPressed(_ sender: Any) {
-        navigationController?.dismiss(animated: true, completion: nil)
+        onComplete?()
+
     }
 
 }
