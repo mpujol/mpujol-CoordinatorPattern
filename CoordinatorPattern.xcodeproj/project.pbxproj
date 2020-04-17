@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		C600954F24492B3C00B9B12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C600954E24492B3C00B9B12F /* Assets.xcassets */; };
 		C600955224492B3C00B9B12F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C600955024492B3C00B9B12F /* LaunchScreen.storyboard */; };
 		C600955D24492B3C00B9B12F /* CoordinatorPatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600955C24492B3C00B9B12F /* CoordinatorPatternTests.swift */; };
+		C600956D244931B200B9B12F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600956B244931B200B9B12F /* MainViewController.swift */; };
+		C600956E244931B200B9B12F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C600956C244931B200B9B12F /* MainViewController.xib */; };
+		C6009571244937CE00B9B12F /* BaseAdventureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600956F244937CE00B9B12F /* BaseAdventureViewController.swift */; };
+		C600957524493AB200B9B12F /* GuitarQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600957324493AB200B9B12F /* GuitarQuestViewController.swift */; };
+		C600957624493AB200B9B12F /* GuitarQuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C600957424493AB200B9B12F /* GuitarQuestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		C600955824492B3C00B9B12F /* CoordinatorPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C600955C24492B3C00B9B12F /* CoordinatorPatternTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPatternTests.swift; sourceTree = "<group>"; };
 		C600955E24492B3C00B9B12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C600956B244931B200B9B12F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C600956C244931B200B9B12F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C600956F244937CE00B9B12F /* BaseAdventureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAdventureViewController.swift; sourceTree = "<group>"; };
+		C600957324493AB200B9B12F /* GuitarQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarQuestViewController.swift; sourceTree = "<group>"; };
+		C600957424493AB200B9B12F /* GuitarQuestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuitarQuestViewController.xib; sourceTree = "<group>"; };
 		D143D61E569D49FB725236F8 /* Pods_CoordinatorPatternTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorPatternTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,7 +86,6 @@
 				58CB07407C3526B647EFA629 /* Pods-CoordinatorPatternTests.debug.xcconfig */,
 				454A8CF9BFC8600044340F38 /* Pods-CoordinatorPatternTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +121,7 @@
 		C600954424492B3B00B9B12F /* CoordinatorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				C600956A2449315D00B9B12F /* View Controllers */,
 				C600954524492B3B00B9B12F /* AppDelegate.swift */,
 				C600954724492B3B00B9B12F /* SceneDelegate.swift */,
 				C600954924492B3B00B9B12F /* ViewController.swift */,
@@ -130,6 +140,18 @@
 				C600955E24492B3C00B9B12F /* Info.plist */,
 			);
 			path = CoordinatorPatternTests;
+			sourceTree = "<group>";
+		};
+		C600956A2449315D00B9B12F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C600956B244931B200B9B12F /* MainViewController.swift */,
+				C600956C244931B200B9B12F /* MainViewController.xib */,
+				C600956F244937CE00B9B12F /* BaseAdventureViewController.swift */,
+				C600957324493AB200B9B12F /* GuitarQuestViewController.swift */,
+				C600957424493AB200B9B12F /* GuitarQuestViewController.xib */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C600957624493AB200B9B12F /* GuitarQuestViewController.xib in Resources */,
 				C600955224492B3C00B9B12F /* LaunchScreen.storyboard in Resources */,
 				C600954F24492B3C00B9B12F /* Assets.xcassets in Resources */,
 				C600954D24492B3B00B9B12F /* Main.storyboard in Resources */,
+				C600956E244931B200B9B12F /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +326,10 @@
 			files = (
 				C600954A24492B3B00B9B12F /* ViewController.swift in Sources */,
 				C600954624492B3B00B9B12F /* AppDelegate.swift in Sources */,
+				C6009571244937CE00B9B12F /* BaseAdventureViewController.swift in Sources */,
+				C600957524493AB200B9B12F /* GuitarQuestViewController.swift in Sources */,
 				C600954824492B3B00B9B12F /* SceneDelegate.swift in Sources */,
+				C600956D244931B200B9B12F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

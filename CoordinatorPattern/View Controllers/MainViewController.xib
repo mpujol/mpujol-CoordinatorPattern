@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="CoordinatorPattern" customModuleProvider="target">
+            <connections>
+                <outlet property="startButton" destination="hv6-GB-68T" id="Jyd-up-SHb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-screen" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-jz-eZS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv6-GB-68T">
+                    <rect key="frame" x="120" y="489" width="174" height="60"/>
+                    <color key="backgroundColor" red="0.45364528894424438" green="0.73911315202713013" blue="0.18803372979164124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="174" id="4Ba-F3-41O"/>
+                        <constraint firstAttribute="height" constant="60" id="8qN-Cp-fvn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                    <state key="normal" title="START">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hv6-GB-68T" secondAttribute="bottom" constant="313" id="4Zn-p0-2JP"/>
+                <constraint firstItem="hv6-GB-68T" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ddj-G9-oM2"/>
+                <constraint firstItem="2zM-jz-eZS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PVa-Xu-5yu"/>
+                <constraint firstAttribute="bottom" secondItem="2zM-jz-eZS" secondAttribute="bottom" id="TNT-qG-Vv6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2zM-jz-eZS" secondAttribute="trailing" id="fKk-oo-HQb"/>
+                <constraint firstItem="2zM-jz-eZS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fw0-FZ-7RB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="launch-screen" width="240" height="338"/>
+    </resources>
+</document>
